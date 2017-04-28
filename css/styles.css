@@ -1,0 +1,15 @@
+body {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.radio {
+  padding-left: 25px;
+}
+
+.help-block {
+  color: red;
+}
+/*#look-or-interact {
+  display: none;
+}*/

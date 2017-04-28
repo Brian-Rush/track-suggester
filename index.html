@@ -10,47 +10,279 @@
   </head>
   <body>
     <div class="container">
+      <!-- Jumbotron row -->
       <div class="row">
         <div class="col-md-12">
           <header class="jumbotron">
             <h1>Epicodus Track Suggester</h1>
-            <h2>Let us help you choose the right programming language for you</h2>
+            <h2>Which programming language is right for you?</h2>
           </header>
+        </div>
+      </div>
+      <!-- Zeroth Question/Form Row -->
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <!-- Full or part-time -->
+          <div class="form-group" id="full-or-part-time-q-div">
+            <label for="full-or-part-time">Would you like to study full time or part time?</label>
+            <br>
+            <br>
+            <label class="radio">
+              <input id="full-time" type="radio" name="full-or-part-time" value="true">Full time
+            </label>
+            <label class="radio">
+              <input type="radio" name="full-or-part-time" value="false" id="part-time">Part time
+            </label>
+            <span id="helpBlock0" class="help-block">Please select one of the options above.</span>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-info" id="zeroth-question-button">Submit</button>
+          </div>
+        </div>
+      </div>
+      <!-- Part-time info row -->
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="well" id="part-time-info">
+            <p>
+              Epicodus offers a part-time version of its Introduction to Programming course on Mondays and Wednesdays from 6-9pm for 15 weeks. After completing the course, you have the option to continue to our full-time program.
+            </p>
+            <p>
+              To find out which full-time track might be right for you, go back in your browser and select full-time.
+            </p>
+          </div>
         </div>
       </div>
       <!-- First Question/Form Row -->
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <!-- Back or front div -->
-          <div class="form-group" id="back-or-front-div">
+          <!-- Back or front q div -->
+          <div class="form-group" id="back-or-front-q-div">
             <label for="back-or-front">Are you more interested in the the way things work "under the hood" or are you more interested in the way things look and how people interact with them?</label>
             <br>
             <br>
             <label class="radio">
-              <input id="under-the-hood" type="radio" name="urkel" value="true">Under the hood
+              <input id="under-the-hood" type="radio" name="back-or-front" value="true">Under the hood
             </label>
             <label class="radio">
-              <input type="radio" name="urkel" value="false" id="look-and-interact">Look and interact
+              <input type="radio" name="back-or-front" value="false" id="look-and-interact">Look and interact
             </label>
             <span id="helpBlock1" class="help-block">Please select one of the options above.</span>
           </div>
+          <!-- button -->
+          <div class="form-group">
+            <button type="submit" class="btn btn-info" id="first-question-button">Next Question</button>
+          </div>
         </div>
       </div>
+
       <!-- Second Question/Form Row -->
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <div class="form-group" id="look-or-interact">
-            <label for="back-or-front">Which is more interesting to you:
+          <div class="form-group" id="look-or-interact-q-div">
+            <label for="look-or-interact">Which is more interesting to you:
             how people interact with things or how things look?</label>
             <br>
             <br>
             <label class="radio">
-              <input id="interact" type="radio" name="urkel" value="true">How people interact with things
+              <input id="interact" type="radio" name="look-or-interact" value="true">How people interact with things
             </label>
             <label class="radio">
-              <input type="radio" name="urkel" value="false" id="look">How things look
+              <input type="radio" name="look-or-interact" value="false" id="look">How things look
             </label>
             <span id="helpBlock2" class="help-block">Please select one of the options above.</span>
+            <button type="submit" class="btn btn-info" id="front-end-submit-button">Find out which track we recommend!</button>
+          </div>
+        </div>
+      </div>
+      <!-- CSS/Design info row -->
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="well" id="css-design-info">
+            <h3>We recommend the CSS / Design track</h3>
+            <p>
+              CSS is the language for describing the presentation of Web pages, including colors, layout, fonts, and other stylistic choices. It allows one to adapt the presentation to different types of devices, such as large screens, small screens, and printers. HTML — used for building the structure of the page — and CSS — used for the visual layout — are the two basic languages involved in the building of web pages and web applications.
+            </p>
+            <p>
+              This CSS course building on the fundamentals from our Introduction to Programming Course. Students who learn CSS will be able to style web pages using complex, responsive layouts, while gaining exposure to the latest CSS tools, tricks, and features used every day by front-end developers and designers.
+            </p>
+            <p>
+              CSS programming is an integral part of front-end development. CSS – along with HTML and JavaScript – helps front-end developers control what the user of a website can see and do.
+            </p>
+            <p>
+              Web design is a process of conceptualizing, planning, and building a collection of electronic files that determine the layout, colors, text styles, structure, graphics, images, and use of interactive features that deliver pages to your site visitors. Web Design is a crucial component in web development, and students who learn design will be able to engineer positive and interactive user experiences through innovative interfaces.
+            </p>
+            <p>
+              After establishing solid programming fundamentals in CSS and JavaScript, this course introduces students to the vast world of Design. At Epicodus we know that tools change, but principles don’t. This course focuses on maintaining a strong balance between theory and practice. Students will not only cultivate a solid foundation of basic design principles, but will also gain experience using modern, industry-standard tools such as Sketch and InVision.
+            </p>
+            <p>
+              In a world dominated by big brands and big ideas, the need for skilled designers is greater than ever. Whether you’re an aspiring freelancer, a design-savvy front-end developer, or a budding UI/UX designer, this course is a launching point for anyone interested in designing beautiful, memorable web experiences.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- PHP/React info row -->
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="well" id="php-react-info">
+            <h3>We recommend the PHP / React track</h3>
+            <p>
+              PHP is a popular programming language used for web development, especially for content-heavy websites. It's most commonly used with content management systems like WordPress, Drupal, and Joomla, but is also used in many web applications and backends as well. Students who learn to code in PHP will be able to collect form data, generate dynamic page content, send and receive cookies, and much more.
+            </p>
+            <p>
+              Intel, Metal Toad, and OpenSesame are all companies that use PHP and have hired Epicodus graduates in the past.
+            </p>
+            <p>
+              The PHP course builds on the programming fundamentals from our Introduction to Programming course and gives students more difficult problems to solve, a more advanced set of tools to solve them with, and establishes the foundations for learning the real-world technologies used by programmers on the job. Students will have the opportunity to learn PHP programming and build content-focused websites as well as get acquainted with database systems through SQL programming. The outline of topics for this course is as follows:
+            </p>
+            <p>
+              Learning how to code in PHP is vital for aspiring programmers as it is fundamental in the field of web and mobile development.
+            </p>
+            <p>
+              React is our newest course offering. React is an open-source JavaScript library for building user interfaces. It is used by some of the most successful and influential businesses and websites to deliver fast, simple, scalable, and dynamic interfaces. Stay tuned for more info on our React course.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="question-3-and-4">
+        <!-- Third Question/Form Row -->
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <div class="form-group" id="environment-type-q-div">
+              <label for="environment-type">Which type of environment would you like to work in?</label>
+              <br>
+              <br>
+              <label class="radio">
+                <input id="enterprise" type="radio" name="environment-type" value="true">a structured environment with good benefits and clearly defined protocols
+              </label>
+              <label class="radio">
+                <input type="radio" name="environment-type" value="false" id="agency">a casual but fast-paced environment with lots of variety, plenty of creative freedom, and potentially long hours
+              </label>
+              <label class="radio">
+                <input type="radio" name="environment-type" value="false" id="startup">a very fast-paced environment with lots of excitement, uncertainty, and learning, with a small group of people
+              </label>
+              <span id="helpBlock3" class="help-block">Please select one of the options above.</span>
+            </div>
+          </div>
+        </div>
+        <!-- Fourth Question/Form Row -->
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <div class="form-group" id="platform-type-q-div">
+              <label for="platform-type">Which of these would you most like to work with??</label>
+              <br>
+              <br>
+              <label class="radio">
+                <input id="microsoft" type="radio" name="platform-type" value="true">Microsoft products
+              </label>
+              <label class="radio">
+                <input type="radio" name="platform-type" value="false" id="android">Android
+              </label>
+              <label class="radio">
+                <input type="radio" name="platform-type" value="false" id="other-platform">Other / No preference
+              </label>
+              <span id="helpBlock4" class="help-block">Please select one of the options above.</span>
+              <button type="submit" class="btn btn-info" id="environment-platform-submit-button">Find out which track we recommend!</button>
+            </div>
+          </div>
+        </div>
+        <!-- C#/.net info row -->
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <div class="well" id="c-sharp-net-info">
+              <h3>We recommend the C# / .Net track</h3>
+              <p>
+                The C# ("C sharp") programming language is most commonly used with the .NET framework. Students who are well-versed in C# programming can use it to create client applications, database applications, distributed components, and much more.
+              </p>
+              <p>
+                Students who learn C# programming and combine it with their knowledge of the .NET framework can target larger enterprises, government agencies, and companies serving enterprise and government clients for employment.
+              </p>
+              <p>
+                Companies using C# and .NET who have hired Epicodus graduates include Windsor and Incomm.
+              </p>
+              <p>
+                The C# course builds on the programming fundamentals from our Introduction to Programming course and gives students more difficult problems to solve, a more advanced set of tools to solve them with, and establishes the foundations for learning the real-world technologies used by programmers on the job. Students will have the opportunity to learn C-sharp – widely considered as every developer’s first choice language for building Windows desktop applications. The outline of topics for this course is as follows:
+              </p>
+              <p>
+                Learning C# is vital for aspiring programmers as it is fundamental in the field of web and mobile development.
+              </p>
+              <p>
+                .NET is a software framework developed by Microsoft and primarily used on Microsoft Windows. The .NET framework is used to create desktop, mobile, and web applications that run on various devices. It compiles and executes programs written in the C# and Visual Basic languages. C# and .NET are typically used by large enterprises, government agencies, and companies serving enterprises and government clients.
+              </p>
+              <p>
+                Companies that work with C# and the .NET framework that have hired Epicodus graduates include Windsor and Incomm.
+              </p>
+              <p>
+                After establishing solid programming fundamentals in the C# and JavaScript courses, this course introduces students to the .NET framework and gives them more difficult problems to solve, a more advanced set of tools to solve them with. It also establishes the foundations for learning real-world technologies used by programmers on the job. The outline of topics for this course is as follows:
+              </p>
+              <p>
+                Learning .NET framework programming is crucial for aspiring programmers seeking careers in the .NET development industry.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Java/Android info row -->
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <div class="well" id="java-android-info">
+              <h3>We recommend the Java / Android track</h3>
+              <p>
+                Java is arguably the most popular programming language today. It's used for everything from web applications to backend services to mobile applications to embedded systems. Students who learn Java programming will be able to create dynamic web applications, and be able continue into our Android track.
+              </p>
+              <p>
+                Companies using Java who have hired Epicodus graduates include Nike and Thetus.
+              </p>
+              <p>
+                This Java programming course builds on the programming fundamentals from Introduction to Programming and gives students more difficult problems to solve and a more advanced set of tools to solve them with. It establishes the foundations for learning the real-world technologies used by programmers on the job.
+              </p>
+              <p>
+                Through this Java course, students will learn how to code in Java —one of the most widely-used programming languages, used in everything from Android apps to large enterprise development.
+              </p>
+              <p>
+                Android is a mobile operating system developed by Google, based on Linux and designed primarily for touchscreen mobile devices such as smartphones and tablets. Android is the most popular operating system and used for a variety of purposes, including running mobile apps, taking photos, sending messages, etc.
+              </p>
+              <p>
+                Companies using Android who have hired Epicodus graduates include Uncorked Studios and Rigado.
+              </p>
+              <p>
+                After establishing solid programming fundamentals in Java and JavaScript, this course introduces students to the Android framework used to develop mobile apps.
+              </p>
+              <p>
+                Android is used in everything from phones to tablets to watches, and companies hiring Android developers range from small startups to giant enterprises.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Ruby/Rails info row -->
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <div class="well" id="ruby-rails-info">
+              <h3>We recommend the Ruby / Rails track</h3>
+              <p>
+                Ruby is a programming language focused on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write. The Ruby programming language is most commonly used with the Ruby on Rails framework.
+              </p>
+              <p>
+                Ruby and Rails are typically used by younger companies and startups, especially for building interactive web applications. Companies using Ruby and Rails who have hired Epicodus graduates include New Relic, LivingSocial, and SpendWell.
+              </p>
+              <p>
+                After establishing solid programming fundamentals in the Introduction to Programming course, this course introduces students to the Ruby framework and gives them more difficult problems to solve and a more advanced set of tools to solve them with. It also establishes the foundations for learning real-world technologies used by programmers on the job.
+              </p>
+              <p>
+                Ruby on Rails programming is crucial for aspiring programmers seeking a career in Ruby on Rails web development.
+              </p>
+              <p>
+                Rails is a web development framework written in the Ruby language and typically referred to as “Ruby on Rails”. Rails was the first mainstream web framework to embrace the concept of convention over configuration, which improves productivity by setting sensible defaults that work for most projects.
+              </p>
+              <p>
+                Companies using Ruby on Rails who have hired Epicodus graduates include New Relic, LivingSocial, and SpendWell.
+              </p>
+              <p>
+                After establishing solid programming fundamentals in the Ruby and JavaScript courses, this class introduces students to the Rails framework used to build interactive web applications. Students will have the opportunity to learn Ruby on Rails programming and build their own programs.
+              </p>
+              <p>
+                Ruby on Rails programming is typically used by younger companies and startups, especially for building interactive web applications. Applications such as Airbnb, Twitch, SoundCloud, Basecamp, and Hulu were all built with the Rails framework.
+              </p>
+            </div>
           </div>
         </div>
       </div>
