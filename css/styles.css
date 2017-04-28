@@ -9,7 +9,13 @@ body {
 
 .help-block {
   color: red;
+  display: none;
 }
+
+#part-time-info {
+  display: none;
+}
+
 /*#look-or-interact {
   display: none;
 }*/
