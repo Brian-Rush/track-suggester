@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Epicodus Track Suggester</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <header class="jumbotron">
+            <h1>Epicodus Track Suggester</h1>
+            <h2>Let us help you choose the right programming language for you</h2>
+          </header>
+        </div>
+      </div>
+      <!-- First Question/Form Row -->
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <!-- Back or front div -->
+          <div class="form-group" id="back-or-front-div">
+            <label for="back-or-front">Are you more interested in the the way things work "under the hood" or are you more interested in the way things look and how people interact with them?</label>
+            <br>
+            <br>
+            <label class="radio">
+              <input id="under-the-hood" type="radio" name="urkel" value="true">Under the hood
+            </label>
+            <label class="radio">
+              <input type="radio" name="urkel" value="false" id="look-and-interact">Look and interact
+            </label>
+            <span id="helpBlock1" class="help-block">Please select one of the options above.</span>
+          </div>
+        </div>
+      </div>
+      <!-- Second Question/Form Row -->
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="form-group" id="look-or-interact">
+            <label for="back-or-front">Which is more interesting to you:
+            how people interact with things or how things look?</label>
+            <br>
+            <br>
+            <label class="radio">
+              <input id="interact" type="radio" name="urkel" value="true">How people interact with things
+            </label>
+            <label class="radio">
+              <input type="radio" name="urkel" value="false" id="look">How things look
+            </label>
+            <span id="helpBlock2" class="help-block">Please select one of the options above.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
