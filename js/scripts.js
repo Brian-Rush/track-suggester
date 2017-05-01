@@ -6,7 +6,6 @@
 $(document).ready(function() {
   $("form").submit(function(event) {
     var answerZero = $("input[type=radio][name=radio-group-zero]:checked").val();
-    // if answerZero =
 
     $('#question-zero').submit(function() {
       if (answerZero = "part-time") {
