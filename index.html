@@ -23,22 +23,38 @@
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
           <!-- Full or part-time -->
-          <form id = "question-zero">
+          <div>
+            <form id='question-zero'>
+              <div class="form-group">
+                <p>
+                  Would you like to study full time or part time?
+                </p>
+                <div class="radio">
+                  <label for=""><input type="radio" name="radio-group-zero" value="full-time" checked="checked">Full time</label>
+                </div>
+                <div class="radio">
+                  <label for=""><input type="radio" name="radio-group-zero" value="part-time">Part time</label>
+                </div>
+                <button type="submit" class="btn btn-info" id="zeroth-question-button">Submit</button>
+              </div>
+            </form>
+          </div>
+          <!-- <form id="question-zero">
             <div class="form-group" id="full-or-part-time-q-div">
               <label for="full-or-part-time">Would you like to study full time or part time?</label>
               <br>
               <br>
               <label class="radio">
-                <input id="full-time" type="radio" name="full-or-part-time" autocomplete="off" value="true" checked="checked">Full time
+                <input id="full-time" type="radio" name="full-or-part-time" autocomplete="off" checked="checked">Full time
               </label>
               <label class="radio">
-                <input type="radio" name="full-or-part-time" value="false" id="part-time">Part time
+                <input type="radio" name="full-or-part-time" id="part-time">Part time
               </label>
             </div>
             <div class="form-group">
               <button type="submit" class="btn btn-info" id="zeroth-question-button">Submit</button>
             </div>
-          </form>
+          </form> -->
         </div>
       </div>
       <!-- Part-time info row -->
@@ -49,7 +65,7 @@
               Epicodus offers a part-time version of its Introduction to Programming course on Mondays and Wednesdays from 6-9pm for 15 weeks. After completing the course, you have the option to continue to our full-time program.
             </p>
             <p>
-              To find out which full-time track might be right for you, go back in your browser and select full-time.
+              To find out which full-time track might be right for you, refresh your browser and select full-time.
             </p>
           </div>
         </div>

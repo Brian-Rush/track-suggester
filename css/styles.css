@@ -16,6 +16,10 @@ body {
   display: none;
 }
 
+#back-or-front-q-div {
+  display: none;
+}
+
 /*#look-or-interact {
   display: none;
 }*/
