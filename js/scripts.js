@@ -6,14 +6,16 @@
 $(document).ready(function() {
   $("form").submit(function(event) {
     var answerZero = $("input[type=radio][name=radio-group-zero]:checked").val();
+    var answerOne = $("input[type=radio][name=radio-group-zero]:checked").val();
 
-    $('#question-zero').submit(function() {
-      if (answerZero = "part-time") {
+    // $('#question-zero').submit(function() {
+      if (answerZero === "part-time") {
         $('#part-time-info').show();
       } else {
         $('#back-or-front-q-div').show();
+        $('#question-zero').hide();
       }
-    })
+    // })
     //   $("input[type=radio][name=radio-group-zero]:checked").val();
     // });
     event.preventDefault()
