@@ -3,6 +3,10 @@ body {
   margin-right: 10px;
 }
 
+.initially-hidden {
+  display: none;
+}
+
 .radio {
   padding-left: 25px;
 }
@@ -11,15 +15,3 @@ body {
   color: red;
   display: none;
 }
-
-#part-time-info {
-  display: none;
-}
-
-#back-or-front-q-div {
-  display: none;
-}
-
-/*#look-or-interact {
-  display: none;
-}*/

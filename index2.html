@@ -7,9 +7,11 @@
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
   </head>
+
   <body>
     <div class="container">
-      <!-- Jumbotron row -->
+
+      <!-- Jumbotron Row -->
       <div class="row">
         <div class="col-md-12">
           <header class="jumbotron">
@@ -18,7 +20,8 @@
           </header>
         </div>
       </div>
-      <!-- Zeroth Question/Form Row -->
+
+      <!-- Question Zero/Form Row -->
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
           <!-- Full or part-time -->
@@ -40,7 +43,6 @@
           </div>
         </div>
       </div>
-
       <!-- Hidden Questions -->
 
       <!-- Question 1/Form Row -->
@@ -48,7 +50,7 @@
         <div class="col-md-10 col-md-offset-1">
           <!-- Back or front q div -->
           <div>
-            <form id='question-one'>
+            <form class="initially-hidden" id='question-one'>
               <div class="form-group">
                 <p>
                   Are you more interested in the way things work "under the hood" or are you more interested in the way things look and how people interact with them?
@@ -72,7 +74,7 @@
         <div class="col-md-10 col-md-offset-1">
           <!-- Look or Interact -->
           <div>
-            <form id='question-two-front'>
+            <form class="initially-hidden" id='question-two-front'>
               <div class="form-group">
                 <p>
                   It sounds like you'd most enjoy working on the front end of things.
@@ -92,12 +94,13 @@
         </div>
       </div>
 
-      <!-- Question 2-back/Form Row -->
+      <!-- Question 2-back-3/Form Row -->
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <!-- Environment & Platform Q Div -->
+          <!-- Environment & Platform Qs Div -->
           <div>
-            <form id='question-two-back'>
+            <form class="initially-hidden" id='question-two-back'>
+              <!-- Question 2-back -->
               <div class="form-group">
                 <p>
                   Which type of environment would you like to work in?
@@ -111,50 +114,47 @@
                 <div class="radio">
                   <label for=""><input type="radio" name="radio-group-two-back" value="start-up">Start-up (a very fast-paced environment with lots of excitement, uncertainty, and learning, with a small group of people)</label>
                 </div>
-                <!-- <button type="submit" class="btn btn-info" id="question-two-back-button">Next question</button> -->
+              </div>
+              <!-- Question 3 -->
+              <div class="form-group">
+                <p>
+                  Which of these would you most like to develop for?
+                </p>
+                <div class="radio">
+                  <label for=""><input type="radio" name="radio-group-three" value="microsoft">Microsoft products</label>
+                </div>
+                <div class="radio">
+                  <label for=""><input type="radio" name="radio-group-three" value="android">Android</label>
+                </div>
+                <div class="radio">
+                  <label for=""><input type="radio" name="radio-group-three" value="other-platform">Apple / Other / No preference</label>
+                </div>
+                <button type="submit" class="btn btn-info">Find out which track we recommend!</button>
               </div>
             </form>
           </div>
         </div>
       </div>
-        <!-- Question 3/Form Row -->
-        <div class="row">
-          <div class="col-md-10 col-md-offset-1">
-            <div class="form-group" id="question-three">
-              <label for="radio-group-three">Which of these would you most like to work with??</label>
-              <br>
-              <br>
-              <label class="radio">
-                <input type="radio" name="radio-group-three" value="microsoft">Microsoft products
-              </label>
-              <label class="radio">
-                <input type="radio" name="radio-group-three" value="android">Android
-              </label>
-              <label class="radio">
-                <input type="radio" name="radio-group-three" value="other-platform">Apple / Other / No preference
-              </label>
-              <button type="submit" class="btn btn-info" id="environment-platform-submit-button">Find out which track we recommend!</button>
-            </div>
-          </div>
-        </div>
-      <!-- </div> -->
+
+      <!-- Info Panels -->
       <!-- Part-time info row -->
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <div class="well" id="part-time-info">
+          <div class="well initially-hidden" id="part-time-info">
             <p>
               Epicodus offers a part-time version of its Introduction to Programming course on Mondays and Wednesdays from 6-9pm for 15 weeks. After completing the course, you have the option to continue to our full-time program.
             </p>
             <p>
-              To find out which full-time track might be right for you, refresh your browser and select full-time.
+              To find out which full-time track might be right for you, select full-time above and click the button again.
             </p>
           </div>
         </div>
       </div>
+
       <!-- CSS/Design info row -->
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <div class="well" id="css-design-info">
+          <div class="well initially-hidden" id="css-design-info">
             <h3>We recommend the CSS / Design track</h3>
             <p>
               CSS is the language for describing the presentation of Web pages, including colors, layout, fonts, and other stylistic choices. It allows one to adapt the presentation to different types of devices, such as large screens, small screens, and printers. HTML — used for building the structure of the page — and CSS — used for the visual layout — are the two basic languages involved in the building of web pages and web applications.
@@ -177,10 +177,11 @@
           </div>
         </div>
       </div>
+
       <!-- PHP/React info row -->
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <div class="well" id="php-react-info">
+          <div class="well initially-hidden" id="php-react-info">
             <h3>We recommend the PHP / React track</h3>
             <p>
               PHP is a popular programming language used for web development, especially for content-heavy websites. It's most commonly used with content management systems like WordPress, Drupal, and Joomla, but is also used in many web applications and backends as well. Students who learn to code in PHP will be able to collect form data, generate dynamic page content, send and receive cookies, and much more.
@@ -200,10 +201,11 @@
           </div>
         </div>
       </div>
+
       <!-- C#/.net info row -->
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <div class="well" id="c-sharp-net-info">
+          <div class="well initially-hidden" id="c-sharp-net-info">
             <h3>We recommend the C# / .Net track</h3>
             <p>
               The C# ("C sharp") programming language is most commonly used with the .NET framework. Students who are well-versed in C# programming can use it to create client applications, database applications, distributed components, and much more.
@@ -235,10 +237,11 @@
           </div>
         </div>
       </div>
+
       <!-- Java/Android info row -->
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <div class="well" id="java-android-info">
+          <div class="well initially-hidden" id="java-android-info">
             <h3>We recommend the Java / Android track</h3>
             <p>
               Java is arguably the most popular programming language today. It's used for everything from web applications to backend services to mobile applications to embedded systems. Students who learn Java programming will be able to create dynamic web applications, and be able continue into our Android track.
@@ -267,10 +270,11 @@
           </div>
         </div>
       </div>
+
       <!-- Ruby/Rails info row -->
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <div class="well" id="ruby-rails-info">
+          <div class="well initially-hidden" id="ruby-rails-info">
             <h3>We recommend the Ruby / Rails track</h3>
             <p>
               Ruby is a programming language focused on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write. The Ruby programming language is most commonly used with the Ruby on Rails framework.
@@ -298,7 +302,8 @@
             </p>
           </div>
         </div>
-      </div>
+
+
     </div>
   </body>
 </html>
