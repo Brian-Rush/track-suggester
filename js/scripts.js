@@ -1,30 +1,35 @@
 //Business logic
 
-// var doubleQuestionFunction = function(valueA, valueB, infoA, infoB, infoC, errorMessage) {
-//   var total = valueA + valueB;
-//   if (total === 11 || total === 21) {
-//     var infoDisplay = infoA;
-//   } else if (total === 31) {
-//     var infoDisplay = infoA;
-//     var infoDisplay2 = infoB;
-//   } else if (total === 13 || total === 23 || total === 33) {
-//     var infoDisplay = infoB;
-//   } else if (total === 32) {
-//     var infoDisplay = infoB;
-//     var infoDisplay = infoC;
-//   } else if (total === 12 || total === 22) {
-//     var infoDisplay = infoC;
-//   }
+var doubleQuestionFunction = function(valueA, valueB, infoA, infoB, infoC, errorMessage) {
+  var total = valueA + valueB;
+  var errorPrompt
+  if (total === 11 || total === 21) {
+    var infoDisplay = infoA;
+  } else if (total === 31) {
+    var infoDisplay = infoA;
+    var infoDisplay2 = infoB;
+  } else if (total === 13 || total === 23 || total === 33) {
+    var infoDisplay = infoB;
+  } else if (total === 32) {
+    var infoDisplay = infoB;
+    var infoDisplay2 = infoC;
+  } else if (total === 12 || total === 22) {
+    var infoDisplay = infoC;
+  } else {
+    return errorMessage;
+   }
+  // console.log(infoDisplay);
+  // return infoDisplay;
+  if (infoDisplay2) {
+    console.log(infoDisplay2, infoDisplay);
+    // return infoDisplay2;
+  } else if (!infoDisplay2) {
+    console.log(infoDisplay);
+  } else {
+    console.log(errorMessage);
+  }
 
-  // if (infoDisplay2 === undefined)
-  // if (Array.isArray(display) === true) {
-  //   infoDisplay.forEach
-  // }
-  // if (Number.isInteger(display2) === true)
-  // infoDisplay.show()
-  // infoDisplay2.show()
-// }
-
+};
 
 // User Interface Logic
 
@@ -67,12 +72,9 @@ $(document).ready(function() {
       $('#php-react-info').show();
     }
 
-    // //question Two-Back
-    // doubleQuestionFunction(answerTwoBack, answerThree, #c-sharp-net-info, #ruby-rails-info, #java-android-info) {
-    //   display.show();
-        // if (display2.val()) {
-        //   display2.show();
-        // }
-    // }
+    //question Two-Back and Three
+    doubleQuestionFunction(answerTwoBack, answerThree, "$('#c-sharp-net-info')", "$('#ruby-rails-info')", "$('#java-android-info')", "$('#help-block-3')");
+
+
   });
 });
