@@ -16,9 +16,7 @@ var doubleQuestionFunction = function(valueA, valueB, infoA, infoB, infoC) {
     infoDisplay.push(infoB, infoC);
   } else if (total === 12 || total === 22) {
     infoDisplay.push(infoC);
-  } else if (total !== 11,12,13,21,22,23,31,32,33) {
-    infoDisplay.push(errorMessage);
-  }
+  } 
 };
 
 // User Interface Logic
