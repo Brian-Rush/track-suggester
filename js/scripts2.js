@@ -1,9 +1,11 @@
 //Business logic
+
+//Creates array in case of multiple panels needing to be displayed
 var infoDisplay = [];
 
-var doubleQuestionFunction = function(valueA, valueB, infoA, infoB, infoC, errorMessage) {
+//Function to assess which panel to display based on combined value of two questions
+var doubleQuestionFunction = function(valueA, valueB, infoA, infoB, infoC) {
   var total = valueA + valueB;
-  var errorPrompt
   if (total === 11 || total === 21) {
     infoDisplay.push(infoA);
   } else if (total === 31) {
@@ -14,12 +16,9 @@ var doubleQuestionFunction = function(valueA, valueB, infoA, infoB, infoC, error
     infoDisplay.push(infoB, infoC);
   } else if (total === 12 || total === 22) {
     infoDisplay.push(infoC);
-  } else {
-    return errorMessage;
-   }
-  console.log(infoDisplay);
-  // return infoDisplay;
-
+  } else if (total !== 11,12,13,21,22,23,31,32,33) {
+    infoDisplay.push(errorMessage);
+  }
 };
 
 // User Interface Logic
@@ -62,25 +61,23 @@ $(document).ready(function() {
   });
 });
 
+//question Two-Back and Three
 $(document).ready(function() {
-  $("form").submit(function(event) {
+  $("#question-two-back").submit(function(event) {
     event.preventDefault();
 
     var answerTwoBack = parseInt($("input[type=radio][name=radio-group-two-back]:checked").val());
     var answerThree = parseInt($("input[type=radio][name=radio-group-three]:checked").val());
 
-    //question Two-Back and Three
-    var outcome = doubleQuestionFunction(answerTwoBack, answerThree, "#c-sharp-net-info", "#ruby-rails-info", "#java-android-info", "#help-block-3");
+    doubleQuestionFunction(answerTwoBack, answerThree, "#c-sharp-net-info", "#ruby-rails-info", "#java-android-info");
 
-    infoDisplay.forEach(function(info) {
-      $(info).show();
-    });
-
-    // var showOutcome = function() {
-    //   ("$('" + outcome + ")'").show();
-    // }
-    // console.log(showOutcome());
-    // showOutcome;
-
+    var finalDisplay = function() {
+      $('.initially-hidden').hide();
+      $('#question-two-back').show();
+      infoDisplay.forEach(function(info) {
+        $(info).show();
+      });
+    };
+    finalDisplay();
   });
 });
