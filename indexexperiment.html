@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Epicodus Track Suggester</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Row -->
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <!-- Form -->
+          <div>
+            <form id='question-two-back'>
+              <!-- Question 2-back -->
+              <div class="form-group">
+                <p>
+                  Which type of environment would you like to work in?
+                </p>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="radio-group-two-back" value="1">Big, established company (a structured environment with good benefits and clearly defined protocols)
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="radio-group-two-back" value="2">Agency (a casual but fast-paced environment with lots of variety, plenty of creative freedom, and potentially long hours)
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="radio-group-two-back" value="3">Start-up (a very fast-paced environment with lots of excitement, uncertainty, and learning, with a small group of people)
+                  </label>
+                </div>
+              </div>
+              <!-- Question 3 -->
+              <div class="form-group">
+                <p>
+                  Which of these would you most like to develop for?
+                </p>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="radio-group-three" value="10">Microsoft products
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="radio-group-three" value="20">Android
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="radio-group-three" value="30">Apple / Other / No preference
+                  </label>
+                </div>
+                <span id="help-block-3" class="help-block">Please answer both questions.</span>
+                <button type="submit" class="btn btn-info">Find out which track we recommend!</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- C#/.net info row -->
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="well initially-hidden" id="c-sharp-net-info">
+            <h3>We recommend the C# / .Net track</h3>
+            <p>
+              The C# ("C sharp") programming language is most commonly used with the .NET framework. Students who are well-versed in C# programming can use it to create client applications, database applications, distributed components, and much more.
+            </p>
+            <p>
+              Students who learn C# programming and combine it with their knowledge of the .NET framework can target larger enterprises, government agencies, and companies serving enterprise and government clients for employment.
+            </p>
+            <p>
+              Companies using C# and .NET who have hired Epicodus graduates include Windsor and Incomm.
+            </p>
+            <p>
+              The C# course builds on the programming fundamentals from our Introduction to Programming course and gives students more difficult problems to solve, a more advanced set of tools to solve them with, and establishes the foundations for learning the real-world technologies used by programmers on the job. Students will have the opportunity to learn C-sharp – widely considered as every developer’s first choice language for building Windows desktop applications. The outline of topics for this course is as follows:
+            </p>
+            <p>
+              Learning C# is vital for aspiring programmers as it is fundamental in the field of web and mobile development.
+            </p>
+            <p>
+              .NET is a software framework developed by Microsoft and primarily used on Microsoft Windows. The .NET framework is used to create desktop, mobile, and web applications that run on various devices. It compiles and executes programs written in the C# and Visual Basic languages. C# and .NET are typically used by large enterprises, government agencies, and companies serving enterprises and government clients.
+            </p>
+            <p>
+              Companies that work with C# and the .NET framework that have hired Epicodus graduates include Windsor and Incomm.
+            </p>
+            <p>
+              After establishing solid programming fundamentals in the C# and JavaScript courses, this course introduces students to the .NET framework and gives them more difficult problems to solve, a more advanced set of tools to solve them with. It also establishes the foundations for learning real-world technologies used by programmers on the job. The outline of topics for this course is as follows:
+            </p>
+            <p>
+              Learning .NET framework programming is crucial for aspiring programmers seeking careers in the .NET development industry.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Java/Android info row -->
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="well initially-hidden" id="java-android-info">
+            <h3>We recommend the Java / Android track</h3>
+            <p>
+              Java is arguably the most popular programming language today. It's used for everything from web applications to backend services to mobile applications to embedded systems. Students who learn Java programming will be able to create dynamic web applications, and be able continue into our Android track.
+            </p>
+            <p>
+              Companies using Java who have hired Epicodus graduates include Nike and Thetus.
+            </p>
+            <p>
+              This Java programming course builds on the programming fundamentals from Introduction to Programming and gives students more difficult problems to solve and a more advanced set of tools to solve them with. It establishes the foundations for learning the real-world technologies used by programmers on the job.
+            </p>
+            <p>
+              Through this Java course, students will learn how to code in Java —one of the most widely-used programming languages, used in everything from Android apps to large enterprise development.
+            </p>
+            <p>
+              Android is a mobile operating system developed by Google, based on Linux and designed primarily for touchscreen mobile devices such as smartphones and tablets. Android is the most popular operating system and used for a variety of purposes, including running mobile apps, taking photos, sending messages, etc.
+            </p>
+            <p>
+              Companies using Android who have hired Epicodus graduates include Uncorked Studios and Rigado.
+            </p>
+            <p>
+              After establishing solid programming fundamentals in Java and JavaScript, this course introduces students to the Android framework used to develop mobile apps.
+            </p>
+            <p>
+              Android is used in everything from phones to tablets to watches, and companies hiring Android developers range from small startups to giant enterprises.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Ruby/Rails info row -->
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="well initially-hidden" id="ruby-rails-info">
+            <h3>We recommend the Ruby / Rails track</h3>
+            <p>
+              Ruby is a programming language focused on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write. The Ruby programming language is most commonly used with the Ruby on Rails framework.
+            </p>
+            <p>
+              Ruby and Rails are typically used by younger companies and startups, especially for building interactive web applications. Companies using Ruby and Rails who have hired Epicodus graduates include New Relic, LivingSocial, and SpendWell.
+            </p>
+            <p>
+              After establishing solid programming fundamentals in the Introduction to Programming course, this course introduces students to the Ruby framework and gives them more difficult problems to solve and a more advanced set of tools to solve them with. It also establishes the foundations for learning real-world technologies used by programmers on the job.
+            </p>
+            <p>
+              Ruby on Rails programming is crucial for aspiring programmers seeking a career in Ruby on Rails web development.
+            </p>
+            <p>
+              Rails is a web development framework written in the Ruby language and typically referred to as “Ruby on Rails”. Rails was the first mainstream web framework to embrace the concept of convention over configuration, which improves productivity by setting sensible defaults that work for most projects.
+            </p>
+            <p>
+              Companies using Ruby on Rails who have hired Epicodus graduates include New Relic, LivingSocial, and SpendWell.
+            </p>
+            <p>
+              After establishing solid programming fundamentals in the Ruby and JavaScript courses, this class introduces students to the Rails framework used to build interactive web applications. Students will have the opportunity to learn Ruby on Rails programming and build their own programs.
+            </p>
+            <p>
+              Ruby on Rails programming is typically used by younger companies and startups, especially for building interactive web applications. Applications such as Airbnb, Twitch, SoundCloud, Basecamp, and Hulu were all built with the Rails framework.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

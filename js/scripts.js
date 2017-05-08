@@ -22,11 +22,10 @@ var doubleQuestionFunction = function(valueA, valueB, infoA, infoB, infoC, error
   // return infoDisplay;
   if (infoDisplay2) {
     console.log(infoDisplay2, infoDisplay);
-    // return infoDisplay2;
+    // return infoDisplay2, infoDisplay;
   } else if (!infoDisplay2) {
     console.log(infoDisplay);
-  } else {
-    console.log(errorMessage);
+    // return infoDisplay;
   }
 
 };
@@ -40,9 +39,6 @@ $(document).ready(function() {
     var answerZero = $("input[type=radio][name=radio-group-zero]:checked").val();
     var answerOne = $("input[type=radio][name=radio-group-one]:checked").val();
     var answerTwoFront = $("input[type=radio][name=radio-group-two-front]:checked").val();
-    var answerTwoBack = parseInt($("input[type=radio][name=radio-group-two-back]:checked").val());
-    var answerThree = parseInt($("input[type=radio][name=radio-group-three]:checked").val());
-
 
     // Question Zero
     if (answerZero == "part-time") {
@@ -71,10 +67,29 @@ $(document).ready(function() {
       $('.initially-hidden').hide();
       $('#php-react-info').show();
     }
+  });
+});
+
+$(document).ready(function() {
+  $("form").submit(function(event) {
+    event.preventDefault();
+
+    var answerTwoBack = parseInt($("input[type=radio][name=radio-group-two-back]:checked").val());
+    var answerThree = parseInt($("input[type=radio][name=radio-group-three]:checked").val());
+
+
 
     //question Two-Back and Three
-    doubleQuestionFunction(answerTwoBack, answerThree, "$('#c-sharp-net-info')", "$('#ruby-rails-info')", "$('#java-android-info')", "$('#help-block-3')");
+    var outcome = doubleQuestionFunction(answerTwoBack, answerThree, "#c-sharp-net-info", "#ruby-rails-info", "#java-android-info", "#help-block-3");
 
+    infoDisplay.show();
+    infoDisplay2.show();
+
+    // var showOutcome = function() {
+    //   ("$('" + outcome + ")'").show();
+    // }
+    // console.log(showOutcome());
+    // showOutcome;
 
   });
 });
