@@ -1,33 +1,22 @@
 //Business logic
 
-var doubleQuestionFunction = function(valueA, valueB, infoA, infoB, infoC, errorMessage) {
-  var total = valueA + valueB;
-  var errorPrompt
-  if (total === 11 || total === 21) {
-    var infoDisplay = infoA;
-  } else if (total === 31) {
-    var infoDisplay = infoA;
-    var infoDisplay2 = infoB;
-  } else if (total === 13 || total === 23 || total === 33) {
-    var infoDisplay = infoB;
-  } else if (total === 32) {
-    var infoDisplay = infoB;
-    var infoDisplay2 = infoC;
-  } else if (total === 12 || total === 22) {
-    var infoDisplay = infoC;
-  } else {
-    return errorMessage;
-   }
-  // console.log(infoDisplay);
-  // return infoDisplay;
-  if (infoDisplay2) {
-    console.log(infoDisplay2, infoDisplay);
-    // return infoDisplay2, infoDisplay;
-  } else if (!infoDisplay2) {
-    console.log(infoDisplay);
-    // return infoDisplay;
-  }
+//Creates array in case of multiple panels needing to be displayed
+var infoDisplay = [];
 
+//Function to assess which panel to display based on combined value of two questions
+var doubleQuestionFunction = function(valueA, valueB, infoA, infoB, infoC) {
+  var total = valueA + valueB;
+  if (total === 11 || total === 21) {
+    infoDisplay.push(infoA);
+  } else if (total === 31) {
+    infoDisplay.push(infoA, infoB);
+  } else if (total === 13 || total === 23 || total === 33) {
+    infoDisplay.push(infoB);
+  } else if (total === 32) {
+    infoDisplay.push(infoB, infoC);
+  } else if (total === 12 || total === 22) {
+    infoDisplay.push(infoC);
+  }
 };
 
 // User Interface Logic
@@ -70,26 +59,23 @@ $(document).ready(function() {
   });
 });
 
+//question Two-Back and Three
 $(document).ready(function() {
-  $("form").submit(function(event) {
+  $("#question-two-back").submit(function(event) {
     event.preventDefault();
 
     var answerTwoBack = parseInt($("input[type=radio][name=radio-group-two-back]:checked").val());
     var answerThree = parseInt($("input[type=radio][name=radio-group-three]:checked").val());
 
+    doubleQuestionFunction(answerTwoBack, answerThree, "#c-sharp-net-info", "#ruby-rails-info", "#java-android-info");
 
-
-    //question Two-Back and Three
-    var outcome = doubleQuestionFunction(answerTwoBack, answerThree, "#c-sharp-net-info", "#ruby-rails-info", "#java-android-info", "#help-block-3");
-
-    infoDisplay.show();
-    infoDisplay2.show();
-
-    // var showOutcome = function() {
-    //   ("$('" + outcome + ")'").show();
-    // }
-    // console.log(showOutcome());
-    // showOutcome;
-
+    var finalDisplay = function() {
+      $('.initially-hidden').hide();
+      $('#question-two-back').show();
+      infoDisplay.forEach(function(info) {
+        $(info).show();
+      });
+    };
+    finalDisplay();
   });
 });
